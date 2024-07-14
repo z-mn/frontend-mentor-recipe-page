@@ -1,0 +1,61 @@
+@font-face {
+    font-family: Outfit;
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: YoungSerif;
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --mainFF: Outfit, sans-serif;
+    --headerFF: YoungSerif, sans-serif;
+    --mainFontWeight: 400;
+    --secondaryFontWeight: 600;
+    --headerFontWeight: 800;
+    --primaryBrown: hsl(14, 45%, 36%);
+    --primaryPink: hsl(332, 51%, 32%);
+    --background: hsl(30, 54%, 90%);
+    --pinkLight: hsl(330, 100%, 98%);
+    --textColour: hsl(30, 18%, 87%);
+    --textColour1: hsl(30, 10%, 34%);
+    --headerColour2: hsl(24, 5%, 18%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    font-family: var(--mainFF);
+    display: grid;
+    place-content: center;
+    color: var(--textColour1);
+}
+
+.card {
+    min-width: 375px;
+    background-color: white;
+    padding: 5rem;
+}
+
+.bold-lower {
+    font-weight: var(--secondaryFontWeight);
+}
+
+.section-title, .title {
+    font-family: var(--headerFF);
+    font-weight: var(--headerFontWeight);
+}
+
+.brown {
+    color: var(--primaryBrown);
+}
+
+section:not(section:last-of-type) {
+    border-bottom: 2px solid black;
+}
