@@ -27,7 +27,7 @@
     --headerColour2: hsl(24, 5%, 18%);
 }
 
-body {
+body, main {
     margin: 0;
     padding: 0;
     background-color: var(--background);
@@ -35,12 +35,49 @@ body {
     display: grid;
     place-content: center;
     color: var(--textColour1);
+    line-height: 1.5;
 }
 
 .card {
     min-width: 375px;
+    max-width: 720px;
     background-color: white;
-    padding: 5rem;
+}
+
+.container {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.omelette-image {
+    margin: auto;
+    max-width: min-content;
+}
+
+.title {
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--headerColour2);
+    margin-block: 1rem 2rem;
+}
+
+.prep-card {
+    background-color: var(--pinkLight);
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+
+li {
+    padding-inline-start: 1rem;
+    padding-block-end: 1rem;
+}
+
+.prep-card h3 {
+    color: var(--primaryPink);
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: var(--secondaryFontWeight);
 }
 
 .bold-lower {
@@ -50,6 +87,10 @@ body {
 .section-title, .title {
     font-family: var(--headerFF);
     font-weight: var(--headerFontWeight);
+}
+
+.section-title {
+    font-size: 2rem;
 }
 
 .brown {
