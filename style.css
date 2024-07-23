@@ -16,7 +16,7 @@
     --mainFF: Outfit, sans-serif;
     --headerFF: YoungSerif, sans-serif;
     --mainFontWeight: 400;
-    --secondaryFontWeight: 600;
+    --secondaryFontWeight: 575;
     --headerFontWeight: 800;
     --primaryBrown: hsl(14, 45%, 36%);
     --primaryPink: hsl(332, 51%, 32%);
@@ -42,6 +42,7 @@ body, main {
     min-width: 375px;
     max-width: 720px;
     background-color: white;
+    overflow-x: hidden;
 }
 
 .container {
@@ -51,8 +52,9 @@ body, main {
 }
 
 .omelette-image {
+    display: block;
     margin: auto;
-    max-width: min-content;
+    max-width: calc(720px - 5rem);
 }
 
 .title {
@@ -66,11 +68,24 @@ body, main {
     background-color: var(--pinkLight);
     padding: 1.5rem 1.5rem 0.5rem 1.5rem;
     border-radius: 10px;
+    margin-block-start: 2rem;
+}
+
+.recipe-info li::marker {
+    color: var(--primaryPink);
 }
 
 li {
-    padding-inline-start: 1rem;
+    padding-inline-start: 1.25rem;
     padding-block-end: 1rem;
+}
+
+li::marker {
+    color: var(--primaryBrown);
+}
+
+ol li::marker {
+    font-weight: var(--secondaryFontWeight);
 }
 
 .prep-card h3 {
@@ -91,12 +106,43 @@ li {
 
 .section-title {
     font-size: 2rem;
+    font-weight: var(--secondaryFontWeight);
+    margin-block-end: 0;
 }
 
 .brown {
     color: var(--primaryBrown);
 }
 
-section:not(section:last-of-type) {
-    border-bottom: 2px solid black;
+section:not(section:last-of-type), .row:not(.row:last-of-type) {
+    border-bottom: 1px solid var(--textColour);
+}
+
+.row {
+    display: flex;
+}
+
+.row p:first-child {
+    margin-inline-start: 2.5rem;
+    width: 4rem;
+}
+
+.row p:last-child {
+    margin: auto;
+    width: 4rem;
+}
+
+/* Media Queries */
+
+@media screen and (width > 640px) {
+    main {
+        padding: 5rem;
+    }
+    .card {
+        border-radius: 30px;
+        padding-block-start: 2.5rem;
+    }
+    .omelette-image {
+        border-radius: 10px;
+    }
 }
