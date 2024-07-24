@@ -140,9 +140,12 @@ section:not(section:last-of-type), .row:not(.row:last-of-type) {
     }
     .card {
         border-radius: 30px;
-        padding-block-start: 2.5rem;
     }
+}
+
+@media screen and (width > 800px) {
     .omelette-image {
         border-radius: 10px;
+        margin-block-start: 3vw;
     }
 }
